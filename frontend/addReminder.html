@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Reminder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Add Reminder</h2>
+
+    <input id="reminderTitle" placeholder="Title"><br><br>
+
+    <input id="reminderCategory" placeholder="Category"><br><br>
+
+    <label>Date:</label><br>
+    <input id="reminderDate" type="date"><br><br>
+
+    <label>Time:</label><br>
+    <input id="reminderTime" type="time"><br><br>
+
+    <label>Priority:</label><br>
+    <select id="priority"><br><br>
+      <option value="LOW">LOW</option>
+      <option value="MEDIUM">MEDIUM</option>
+      <option value="HIGH">HIGH</option>
+    </select><br><br>
+
+    <button onclick="createReminder()">Save Reminder</button>
+
+    <p id="msg"></p>
+
+    <br>
+    <a href="dashboard.html">⬅ Back to Dashboard</a>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

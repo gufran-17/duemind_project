@@ -1,0 +1,225 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: 100vh;
+  padding-top: 40px;
+
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  background-attachment: fixed;
+}
+
+.container {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+
+  width: 90%;
+  max-width: 900px;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+/* ⭐ DASHBOARD TABS */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin: 10px 0 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tab {
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid black;
+  background: white;
+  transition: 0.15s ease;
+}
+
+.tab:hover {
+  background: black;
+  color: white;
+}
+
+.tab.overdue {
+  color: red;
+  border-color: red;
+}
+
+.tab.duesoon {
+  color: orange;
+  border-color: orange;
+}
+
+.tab.upcoming {
+  color: green;
+  border-color: green;
+}
+
+.tab.completed {
+  color: gray;
+  border-color: gray;
+}
+
+.tab.active {
+  background: black;
+  color: white;
+}
+
+/* OUTPUT SCROLL */
+#output {
+  max-height: 75vh;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* INPUT */
+input {
+  width: 100%;
+  padding: 11px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 2px solid #444;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: 0.15s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: black;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
+}
+
+/* BUTTON BASE */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 15px;
+  border: 2px solid black;
+  background: black;
+  color: white;
+  transition: 0.15s ease;
+}
+
+button:hover {
+  background: #222;
+}
+
+/* BUTTON COLORS */
+.edit-btn {
+  background: #2d3436;
+  border-color: #2d3436;
+}
+
+.save-btn {
+  background: orange;
+  border-color: orange;
+}
+
+.delete-btn {
+  background: red;
+  border-color: red;
+}
+
+.complete-btn {
+  background: #22c55e;
+  border-color: #22c55e;
+}
+
+/* BUTTON ROW */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.btn-row button {
+  flex: 1;
+  min-width: 120px;
+  margin-top: 0;
+  padding: 10px;
+  font-size: 14px;
+}
+
+/* REMINDER SPACING */
+.reminder-card {
+  margin-bottom: 18px;
+}
+
+/* COMPLETED STYLE */
+.completed {
+  opacity: 0.6;
+}
+
+/* TOAST */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+
+  background: black;
+  color: white;
+
+  padding: 12px 18px;
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  opacity: 0;
+  transition: all 0.25s ease;
+
+  z-index: 9999;
+}
+
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
+/* 🔥 Premium Priority Colors */
+
+.priority-row {
+  font-weight: 600;
+  margin-top: 8px;
+  padding: 4px 10px;
+  border-radius: 12px;
+  display: inline-block;
+  font-size: 13px;
+}
+
+/* HIGH → Neon Pink */
+.priority-high {
+  background: rgba(255, 20, 147, 0.15);
+  color: #c5086d;
+}
+
+/* MEDIUM → Electric Blue */
+.priority-medium {
+  background: rgba(0, 191, 255, 0.15);
+  color: #023242;
+}
+
+/* LOW → Soft Violet */
+.priority-low {
+  background: rgba(138, 43, 226, 0.15);
+  color: #54079b;
+}

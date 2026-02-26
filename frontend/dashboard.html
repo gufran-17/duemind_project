@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Dashboard</h2>
+
+    <button onclick="window.location.href='addReminder.html'">
+      ➕ Add Reminder
+    </button>
+
+    <br><br>
+
+    <button onclick="loadReminders()">Load Reminders</button>
+
+    <div id="output"></div>
+
+    <p id="msg"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
